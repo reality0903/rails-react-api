@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: Logan
+
+development:
+  <<: *default
+  database: rails-news-api-dev
+
+test:
+  <<: *default
+  database: rails-news-api-dev-test
+
+production:
+  <<: *default
+  database: rails-news-api-dev-prod
